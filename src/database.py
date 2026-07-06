@@ -18,7 +18,7 @@ class Walk(Base):
 
 def get_engine():
     # Creates connections to SQLite DB file
-    return create_engine('sqlite:///data/walks.db')
+    return create_engine('sqlite:///data/uploads/walks.db')
 
 def initialise_db():
     # Creates actual database file and tables
