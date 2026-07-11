@@ -5,5 +5,49 @@
 <div class="stats-row">
     <div class="stat-card">
         <p class="stat-label">Total walks</p>
+        <p class="stat-value">{{ total_walks }}</p>
+    </div>
+
+    <div class="stat-card">
+        <p class="stat-label">Total distance</p>
+        <p class="stat-value">{{ total_distance }}</p>
+    </div>
+
+    <div class="stat-card">
+        <p class="stat-label">Total time</p>
+        <p class="stat-value">{{ total_time }}</p>
     </div>
 </div>
+
+<h2>All walks</h2>
+
+<table class="walks-table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Distance</th>
+            <th>Duration</th>
+            <th>Pace</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for walk in walks %}
+        <tr>
+            <td>{{ walk.date }}</td>
+            <td>{{ walk.name }}</td>
+            <td>{{ walk.distance_km }}</td>
+            <td>{{ walk.duration }}</td>
+            <td>{{ walk.pace }}</td>
+            <td><a href="/walk/{{ walk.id }}">View -></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Heatmap</h2>
+<iframe src="/heatmap" width="100%" height="400" frameborder="0"></iframe>
+
+{% endblock %}

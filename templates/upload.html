@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Log a Walk% endblock %
+{% block content %}
+
+<div class="upload-container">
+    <h1>Log a walk</h1>
+    <p>Upload a GPX file exported from Strava, OS Maps, or any fitness tracking app.</p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="gpx">Choose GPX files</label>
+        <input type="file" id="gpx" name="gpx" accept=".gpx" required>
+        <button type="submit">Upload & analyse</button>
+    </form>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}
