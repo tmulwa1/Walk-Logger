@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ walk.name }}{% endblock %}
+{% block content %}
+
+<a href="/" class="back-link">← Back to dashboard</a>
+<h1>{{ walk.name }}</h1>
+<p class="walk-date">{{ walk.date }}</p>
+
+<div class="stats-row">
+    <div class="stat-card">
+        <p class="stat-label">Distance</p>
+        <p class="stat-value">{{ walk.distance_km }}</p>
+    </div>
+
+    <div class="stat-card">
+        <p class="stat-label">Duration</p>
+        <p class="stat-value">{{ walk.duration }}</p>
+    </div>
+
+    <div class="stat-card">
+        <p class="stat-label">Pace</p>
+        <p class="stat-value">{{ walk.pace }}</p>
+    </div>
+
+    <div class="stat-card">
+        <p class="stat-label">Elevation gain</p>
+        <p class="stat-value">{{ walk.elevation }}</p>
+    </div>
+</div>
+
+<h2>Route</h2>
+<iframe src="/map/{{ walk.id }}" width="100%" height="400" frameborder="0"></iframe>
+
+<h2>Elevation profile</h2>
+<iframe src="/elevation/{{ walk.id }}" width="100%" height="300" frameborder="0"></iframe>
+
+{% endblock %}
