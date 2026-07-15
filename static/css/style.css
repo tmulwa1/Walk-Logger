@@ -48,3 +48,133 @@ h2 {
     font-weight: 600;
     margin: 2rem 0 1rem;
 }
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0p;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    border: 1px solid #E0E0E0;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1D9E75;
+}
+
+.walks-table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.walks-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.walks-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.walks-table tr:last-child td {
+    border-bottom: none;
+}
+
+.walks-table a {
+    color: #1D9E75;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.upload-container {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    padding: 2rem;
+    max-width: 500px;
+}
+
+.upload-container p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+button {
+    background: #1D9E75;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #0F6E56;
+}
+
+.back-link {
+    color: #1D9E75;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.walk-date {
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.error {
+    color: #E24B4A;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+iframe {
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+}
