@@ -39,7 +39,7 @@ def save_walk(name, date, stats, filename):
                 distance_km=stats['distance_km'], 
                 duration=stats['duration'],
                 pace=stats['pace'],
-                elevation_gain=stats['elevation'], 
+                elevation_gain=stats['elevation_gain_m'], 
                 total_points=stats['total_points'],
                 filename=filename)
     
@@ -53,3 +53,9 @@ def get_walks():
     walks = session.query(Walk).all()
     session.close()
     return walks
+
+def get_walk_id(walk_id):
+    session = get_session()
+    walk = session.query(Walk).filter(Walk.id == walk_id).first()
+    session.close()
+    return walk
