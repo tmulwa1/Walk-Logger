@@ -53,3 +53,9 @@ def get_walks():
     walks = session.query(Walk).all()
     session.close()
     return walks
+
+def get_walk_id(walk_id):
+    session = get_session()
+    walk = session.query(Walk).filter_by(Walk.id == walk_id).first()
+    session.close()
+    return walk
