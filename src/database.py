@@ -39,7 +39,7 @@ def save_walk(name, date, stats, filename):
                 distance_km=stats['distance_km'], 
                 duration=stats['duration'],
                 pace=stats['pace'],
-                elevation_gain=stats['elevation_gain_m'], 
+                elevation_gain=stats['elevation'], 
                 total_points=stats['total_points'],
                 filename=filename)
     

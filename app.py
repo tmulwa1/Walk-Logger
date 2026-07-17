@@ -48,12 +48,14 @@ def upload():
         filename = file.filename
         filepath = os.path.join(upload_folder, filename)
         file.save(filepath)
+        print(f"File saved to {filepath}") # Debugging
 
         # Parses data and saves to database
         df = parse_gpx(filepath)
         name = get_metadata(filepath)
         stats = get_stats(df)
         date = df['time'].iloc[0].strftime('%Y-%m-%d')
+        save_walk(name=name, date=date, stats=stats, filename=filename)
 
         return redirect(url_for('dashboard'))
     
