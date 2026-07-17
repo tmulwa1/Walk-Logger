@@ -20,6 +20,6 @@ An app that imports files from walks and builds a personal dashboard.
 
 ## How to run
 1. Clone repository
-2. Install dependencies: *pip install -r requirements.txt*
-3. Run *python app.py*
-4. Open *https://127.0.0.1:5000* in browser
+2. Install dependencies: **pip install -r requirements.txt**
+3. Run **python app.py**
+4. Open **https://127.0.0.1:5000** in browser
